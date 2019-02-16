@@ -54,7 +54,6 @@ class Game
   def turn
     input = current_player.move
     while !board.valid_move?(input)
-      puts "Select a valid square"
       input = current_player.move
     end
 
