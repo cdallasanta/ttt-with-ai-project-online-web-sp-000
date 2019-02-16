@@ -2,20 +2,5 @@
 
 require_relative '../config/environment'
 
-puts "Welcome to CLI Tic-Tac-Toe!"
-puts "How many human players will there be?"
-number_of_humans = gets.chomp.to_i until number_of_humans.between?(0,2)
 
-if number_of_humans == 0
-  game = Game.new(Players::Computer("X"), Players::Computer("O"))
-elsif number_of_humans == 1
-  puts "Which player ('human' or 'comp') will go first?"
-  first_player = gets.chomp until first_player == 'comp' || first_player == 'human'
-  if first_player == 'human'
-    game = Game.new(Players::Human("X"), Players::Computer("O"))
-  else
-    game = Game.new(Players::Computer("X"), Players::Human("O"))
-  end
-else
-  game = Game.new(Players::Human("X"), Players::Human("O"))
-end
+game.play
