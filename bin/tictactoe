@@ -17,26 +17,14 @@ def play_a_game
     else
       game = Game.new(Players::Computer.new("X"), Players::Human.new("O"))
     end
-  else number_of_humans.to_i == 2
+  elsif number_of_humans.to_i == 2
     game = Game.new(Players::Human.new("X"), Players::Human.new("O"))
   end
 
   if number_of_humans != 'wargame'
     game.play
   else
-    score = [0,0,0]
-    100.times do
-      game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
-      winner = game.play
-      if winner == "X"
-        score[0] += 1
-      elsif winner == "O"
-        score[1] += 1
-      else
-        score[2] += 1
-      end
-    end
-    puts "Results: X - #{score[0]}, O - #{score[1]}, D - #{score[2]}"
+    wargame
   end
 
   puts "Would you like to play again? (yes/exit)"
