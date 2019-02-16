@@ -52,7 +52,6 @@ class Game
   end
 
   def turn
-    puts "#{current_player.token}, Select a square"
     input = current_player.move
     while !board.valid_move?(input)
       puts "Select a valid square"
