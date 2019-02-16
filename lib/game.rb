@@ -55,6 +55,7 @@ class Game
     input = current_player.move(board) until board.valid_move?(input)
 
     board.update(input, current_player)
+    board.display
   end
 
   def play
