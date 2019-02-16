@@ -22,7 +22,7 @@ def play_a_game
   end
 
   game.play
-  
+
   puts "Would you like to play again? (yes/exit)"
   input = gets.chomp
   if input == "yes"
@@ -31,5 +31,3 @@ def play_a_game
 end
 
 play_a_game
-
-
