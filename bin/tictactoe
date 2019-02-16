@@ -36,6 +36,7 @@ def play_a_game
       end
       puts "Results: X - #{score[0]}, O - #{score[1]}, D - #{score[2]}"
     end
+  end
 
   puts "Would you like to play again? (yes/exit)"
   input = gets.chomp
