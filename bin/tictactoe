@@ -2,5 +2,4 @@
 
 require_relative '../config/environment'
 
-game = Game.new
-game.play
+puts "Welcome to CLI Tic-Tac-Toe!"
