@@ -63,8 +63,10 @@ class Game
 
     if won?
       puts "Congratulations #{winner}!"
+      return winner
     else
       puts "Cat's Game!"
+      return "draw"
     end
   end
 end
