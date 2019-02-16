@@ -4,7 +4,7 @@ require_relative '../config/environment'
 
 def play_a_game
   puts "Welcome to CLI Tic-Tac-Toe!"
-  puts "How many human players will there be? (0-2)"
+  puts "How many human players will there be? (0-2), or select 'wargame' for a simulation."
   number_of_humans = gets.chomp
 
   if number_of_humans.to_i == 0
