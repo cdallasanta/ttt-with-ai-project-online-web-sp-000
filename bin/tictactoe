@@ -3,3 +3,5 @@
 require_relative '../config/environment'
 
 puts "Welcome to CLI Tic-Tac-Toe!"
+puts "How many human players will there be?"
+number_of_humans = gets.chomp.to_i until number_of_humans.between?(0,2)
