@@ -52,10 +52,7 @@ class Game
   end
 
   def turn
-    input = current_player.move
-    while !board.valid_move?(input)
-      input = current_player.move
-    end
+    input = current_player.move until board.valid_move?(input)
 
     board.update(input, current_player)
   end
