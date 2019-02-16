@@ -5,8 +5,7 @@ require_relative '../config/environment'
 def play_a_game
   puts "Welcome to CLI Tic-Tac-Toe!"
   puts "How many human players will there be?"
-  number_of_humans = gets.chomp.to_i
-  #until number_of_humans.between?(0,2)
+  number_of_humans = gets.chomp.to_i until number_of_humans.between?(0,2)
 
   if number_of_humans == 0
     game = Game.new(Players::Computer("X"), Players::Computer("O"))
