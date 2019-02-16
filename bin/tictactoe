@@ -26,6 +26,7 @@ def play_a_game
   else
     score = [0,0,0]
     100.times do
+      game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
       winner = game.play
       if winner == "X"
         score[0] += 1
