@@ -52,7 +52,6 @@ class Game
   end
 
   def turn
-    board.display
     puts "#{current_player.token}, Select a square"
     input = current_player.move
     while !board.valid_move?(input)
@@ -64,14 +63,10 @@ class Game
   end
 
   def play
-    turn
-    while !over?
-      turn
-    end
+    turn until over?
 
-    board.display
     if won?
-      puts "Congratulations, #{winner}!"
+      puts "Congratulations #{winner}!"
     else
       puts "Cat's Game!"
     end
