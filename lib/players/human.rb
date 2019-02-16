@@ -1,6 +1,6 @@
 module Players
   class Human < Player
-    def move
+    def move (board)
       puts "#{token}, Select a square"
       gets.chomp
     end
