@@ -7,7 +7,7 @@ def play_a_game
   puts "How many human players will there be? (0-2)"
   number_of_humans = gets.chomp
 
-  if number_of_humans.to_i == 0 || number_of_humans == 'wargame'
+  if number_of_humans.to_i == 0
     game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
   elsif number_of_humans.to_i == 1
     puts "Which player ('human' or 'comp') will go first?"
