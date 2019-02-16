@@ -1,5 +1,7 @@
 module Players
-  class Computer
-
+  class Computer < Player
+    def move
+      
+    end
   end
 end
