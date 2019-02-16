@@ -8,17 +8,17 @@ def play_a_game
   number_of_humans = gets.chomp until number_of_humans.to_i.between?(0,2)
 
   if number_of_humans == 0
-    game = Game.new(Players::Computer("X"), Players::Computer("O"))
+    game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
   elsif number_of_humans == 1
     puts "Which player ('human' or 'comp') will go first?"
     first_player = gets.chomp until first_player == 'comp' || first_player == 'human'
     if first_player == 'human'
-      game = Game.new(Players::Human("X"), Players::Computer("O"))
+      game = Game.new(Players::Human.new("X"), Players::Computer.new("O"))
     else
-      game = Game.new(Players::Computer("X"), Players::Human("O"))
+      game = Game.new(Players::Computer.new("X"), Players::Human.new("O"))
     end
   else
-    game = Game.new(Players::Human("X"), Players::Human("O"))
+    game = Game.new(Players::Human.new("X"), Players::Human.new("O"))
   end
 
   game.play
